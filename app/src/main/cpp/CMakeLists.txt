@@ -32,15 +32,230 @@ add_library( # Sets the name of the library.
 
         # Sets the library as a shared library.
         SHARED
-        eng_back.c   eng_parse.c   p11_attr.c  p11_ec.c     p11_key.c   p11_pkey.c
-        eng_err.c    libpkcs11.c   p11_cert.c  p11_err.c    p11_load.c  p11_rsa.c
-        eng_front.c  p11_atfork.c  p11_ckr.c   p11_front.c  p11_misc.c  p11_slot.c
-        config.h   engine.h      libp11.h   p11_pthread.h
-        eng_err.h  libp11-int.h  p11_err.h  pkcs11.h
 
         # Provides a relative path to your source file(s).
-      )
+        libopensc/reader-tr03119.c
+        libopensc/libopensc.exports
+        libopensc/reader-tr03119.h
+        common/compat_dummy.c
+        common/compat_strlcat.c
+        common/compat_strlcpy.c
+        common/compat_strnlen.c
+        common/compat_getpass.c
+        common/compat_getopt.c
+        common/compat_report_rangecheckfailure.c
+        common/compat___iob_func.c
+        common/simclist.c
+        common/libscdl.c
 
+        scconf/scconf.c
+        scconf/parse.c
+        scconf/write.c
+        scconf/sclex.c
+        tools/fread_to_eof.c
+        ui/strings.c
+        ui/notify.c
+        libopensc/pkcs15-sc-hsm.c
+
+        pkcs15init/pkcs15-asepcos.c
+        pkcs15init/pkcs15-authentic.c
+        pkcs15init/pkcs15-cardos.c
+        pkcs15init/pkcs15-cflex.c
+        pkcs15init/pkcs15-entersafe.c
+        pkcs15init/pkcs15-epass2003.c
+        pkcs15init/pkcs15-gids.c
+        pkcs15init/pkcs15-iasecc.c
+        pkcs15init/pkcs15-isoApplet.c
+        pkcs15init/pkcs15-lib.c
+        pkcs15init/pkcs15-muscle.c
+        pkcs15init/pkcs15-myeid.c
+        pkcs15init/pkcs15-oberthur-awp.c
+        pkcs15init/pkcs15-oberthur.c
+        pkcs15init/pkcs15-openpgp.c
+        pkcs15init/pkcs15-rtecp.c
+        pkcs15init/pkcs15-rutoken.c
+        pkcs15init/pkcs15-sc-hsm.c
+        pkcs15init/pkcs15-setcos.c
+        pkcs15init/pkcs15-starcos.c
+        pkcs15init/profile.c
+        pkcs15init/pkcs15-iasecc.h
+        pkcs15init/pkcs15-init.h
+        pkcs15init/pkcs15-oberthur.h
+        pkcs15init/profile.h
+
+        sm/sm-common.h
+        sm/sm-eac.h
+        sm/sm-iso-internal.h
+        sm/sm-iso.h
+        sm/sm-common.c
+        sm/sm-eac.c
+        sm/sm-iso.c
+
+        libopensc/apdu.c
+        libopensc/asn1.c
+        libopensc/aux-data.c
+        libopensc/base64.c
+        libopensc/card-asepcos.c
+        libopensc/card-atrust-acos.c
+        libopensc/card-authentic.c
+        libopensc/card-belpic.c
+        libopensc/card-cac-common.c
+        libopensc/card-cac.c
+        libopensc/card-cac1.c
+        libopensc/card-cardos.c
+        libopensc/card-coolkey.c
+        libopensc/card-default.c
+        libopensc/card-dnie.c
+        libopensc/card-dtrust.c
+        libopensc/card-edo.c
+        libopensc/card-entersafe.c
+        libopensc/card-eoi.c
+        libopensc/card-epass2003.c
+        libopensc/card-esteid2018.c
+        libopensc/card-flex.c
+        libopensc/card-gemsafeV1.c
+        libopensc/card-gids.c
+        libopensc/card-iasecc.c
+        libopensc/card-idprime.c
+        libopensc/card-isoApplet.c
+        libopensc/card-itacns.c
+        libopensc/card-jpki.c
+        libopensc/card-masktech.c
+        libopensc/card-mcrd.c
+        libopensc/card-muscle.c
+        libopensc/card-myeid.c
+        libopensc/card-npa.c
+        libopensc/card-nqApplet.c
+        libopensc/card-oberthur.c
+        libopensc/card-openpgp.c
+        libopensc/card-piv.c
+        libopensc/card-rtecp.c
+        libopensc/card-rutoken.c
+        libopensc/card-sc-hsm.c
+        libopensc/card-setcos.c
+        libopensc/card-skeid.c
+        libopensc/card-starcos.c
+
+        libopensc/card-tcos.c
+        libopensc/card.c
+        libopensc/compression.c
+        libopensc/ctbcs.c
+        libopensc/ctx.c
+        libopensc/internal.h
+        libopensc/reader-pcsc.c
+        libopensc/cwa-dnie.c
+        libopensc/cwa14890.c
+        libopensc/dir.c
+        libopensc/ef-atr.c
+        libopensc/ef-gdo.c
+        libopensc/errors.c
+        libopensc/gp.c
+        libopensc/iasecc-sdo.c
+        libopensc/iasecc-sm.c
+        libopensc/iso7816.c
+        libopensc/log.c
+        libopensc/muscle-filesystem.c
+        libopensc/muscle.c
+        libopensc/padding.c
+        libopensc/pkcs15-actalis.c
+        libopensc/pkcs15-algo.c
+        libopensc/pkcs15-atrust-acos.c
+        libopensc/pkcs15-cac.c
+        libopensc/pkcs15-cache.c
+        libopensc/pkcs15-cardos.c
+        libopensc/pkcs15-cert.c
+        libopensc/pkcs15-coolkey.c
+        libopensc/pkcs15-data.c
+        libopensc/pkcs15-din-66291.c
+        libopensc/pkcs15-dnie.c
+        libopensc/pkcs15-emulator-filter.c
+        libopensc/pkcs15-eoi.c
+        libopensc/pkcs15-esinit.c
+        libopensc/pkcs15-esteid2018.c
+        libopensc/pkcs15-gemsafeV1.c
+        libopensc/pkcs15-gids.c
+        libopensc/pkcs15-iasecc.c
+        libopensc/pkcs15-idprime.c
+        libopensc/pkcs15-itacns.c
+        libopensc/pkcs15-jpki.c
+        libopensc/pkcs15-nqApplet.c
+        libopensc/pkcs15-oberthur.c
+        libopensc/pkcs15-openpgp.c
+        libopensc/pkcs15-pin.c
+        libopensc/pkcs15-piv.c
+        libopensc/pkcs15-prkey.c
+        libopensc/pkcs15-pteid.c
+        libopensc/pkcs15-pubkey.c
+        libopensc/pkcs15-sc-hsm.c
+        libopensc/pkcs15-sec.c
+        libopensc/pkcs15-skeid.c
+        libopensc/pkcs15-skey.c
+        libopensc/pkcs15-starcert.c
+        libopensc/pkcs15-starcos-esign.c
+        libopensc/pkcs15-syn.c
+        libopensc/pkcs15-tccardos.c
+        libopensc/pkcs15-tcos.c
+        libopensc/pkcs15.c
+        libopensc/reader-ctapi.c
+        libopensc/reader-openct.c
+
+        libopensc/sc.c
+        libopensc/sec.c
+        libopensc/simpletlv.c
+        libopensc/sm.c
+        libopensc/asn1.h
+        libopensc/authentic.h
+        libopensc/aux-data.h
+        libopensc/card-cac-common.h
+        libopensc/card-eoi.h
+        libopensc/card-gids.h
+        libopensc/card-npa.h
+        libopensc/card-openpgp.h
+        libopensc/card-sc-hsm.h
+        libopensc/cardctl.h
+        libopensc/cards.h
+        libopensc/ccid-types.h
+        libopensc/compression.h
+        libopensc/ctbcs.h
+        libopensc/cwa-dnie.h
+        libopensc/cwa14890.h
+        libopensc/errors.h
+        libopensc/gp.h
+        libopensc/iasecc-sdo.h
+        libopensc/iasecc.h
+        libopensc/internal-winscard.h
+        libopensc/iso7816.h
+        libopensc/itacns.h
+        libopensc/jpki.h
+        libopensc/log.h
+        libopensc/muscle-filesystem.h
+        libopensc/muscle.h
+        libopensc/opensc.h
+        libopensc/pace.h
+        libopensc/pkcs15-emulator-filter.h
+        libopensc/pkcs15-syn.h
+        libopensc/pkcs15.h
+        libopensc/sc-ossl-compat.h
+        libopensc/simpletlv.h
+        libopensc/sm.h
+        libopensc/types.h
+
+        pkcs11/pkcs11-global.c
+        pkcs11/pkcs11-session.c
+        pkcs11/pkcs11-object.c
+        pkcs11/misc.c
+        pkcs11/slot.c
+        pkcs11/mechanism.c
+        pkcs11/openssl.c
+        pkcs11/framework-pkcs15.c
+        pkcs11/framework-pkcs15init.c
+        pkcs11/debug.c
+        pkcs11/pkcs11.exports
+        pkcs11/pkcs11-display.c
+
+        pkcs11/pkcs11-display.h
+
+)
 
 
 

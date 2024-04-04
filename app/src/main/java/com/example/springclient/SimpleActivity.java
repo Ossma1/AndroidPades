@@ -31,12 +31,7 @@ public class SimpleActivity  extends Activity {
         setContentView(R.layout.activity_simple);
         TextView textView = findViewById(R.id.textView);
 
-       /* Module pkcs11Module = null;
-        try {
-            pkcs11Module = Module.getInstance("libpkcs11-mock.so");
-        } catch (IOException e) {
-            throw new RuntimeException(e);
-        }*/
+
         try {
            // Module pkcs11Module = Module.getInstance("libopensc-pkcs11.so");
             //pkcs11Module.initialize(null);
